@@ -1,0 +1,1 @@
+enum Environment { SANDBOX, PRODUCTION }

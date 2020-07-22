@@ -1,3 +1,12 @@
-# 1.0.0
+## 1.0.2
 
-Initial Version of the library.
+* Fixed production url
+* Removed log responses
+
+## 1.0.1
+
+* Log responses
+
+## 1.0.0
+
+* Initial Version of the library.

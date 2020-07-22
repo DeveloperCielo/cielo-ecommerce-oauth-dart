@@ -6,9 +6,9 @@ import 'package:http/http.dart' as http;
 import 'src/error_response.dart';
 import 'src/access_token_response.dart';
 import 'src/access_token_result.dart';
+import 'src/environment.dart';
 export 'src/access_token_result.dart';
-
-enum Environment { SANDBOX, PRODUCTION }
+export 'src/environment.dart';
 
 class OAuth {
   final String clientId;
@@ -25,7 +25,7 @@ class OAuth {
     if (environment == Environment.SANDBOX)
       this._url = 'https://meucheckoutsandbox.braspag.com.br/api/public/v2/token';
     else
-      this._url = 'https://cieloecommerce.cielo.com.br/api/public/';
+      this._url = 'https://cieloecommerce.cielo.com.br/api/public/v2/token';
 
     var bytes = utf8.encode("$clientId:$clientSecret");
     this._base64 = base64Encode(bytes);
