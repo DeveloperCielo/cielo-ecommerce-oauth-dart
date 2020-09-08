@@ -1,6 +1,6 @@
 name: cielo_oauth
 description: A Flutter package that helps to get oauth token to use on operations available on API REST of API Cielo eCommerce.
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/developercielo/cielo-ecommerce-oauth-dart
 
 environment:

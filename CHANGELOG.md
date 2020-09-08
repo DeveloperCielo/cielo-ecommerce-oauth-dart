@@ -1,3 +1,7 @@
+## 1.0.3
+
+* Added tracking and improvements.
+
 ## 1.0.2
 
 * Fixed production url
