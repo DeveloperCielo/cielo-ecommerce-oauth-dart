@@ -1,3 +1,7 @@
+## 1.1.0
+
+* Modified OAuth call url.
+
 ## 1.0.3
 
 * Added tracking and improvements.
