@@ -1,6 +1,5 @@
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:cielo_oauth/cielo_oauth.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group("correct credentials", () {
@@ -22,9 +21,9 @@ void main() {
       expect(result.accessTokenResponse.accessToken, isNotNull);
     });
 
-    test('returns status code 201', () {
+    test('returns status code 200', () {
       expect(result.statusCode, isNotNull);
-      expect(result.statusCode, 201);
+      expect(result.statusCode, 200);
     });
 
     test('returns null error response', () {

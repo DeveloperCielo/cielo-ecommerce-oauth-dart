@@ -31,7 +31,7 @@ class OAuth {
 
   Future<AccessTokenResult> getToken() async {
     String sdkName = 'cielo_oauth';
-    String sdkVersion = '1.0.3';
+    String sdkVersion = '1.1.0';
 
     Response response = (await http.post(
       this._url,
@@ -47,8 +47,8 @@ class OAuth {
 
 String _defineUrl(Environment environment) {
   return environment == Environment.SANDBOX
-      ? 'https://meucheckoutsandbox.braspag.com.br/api/public/v2/token'
-      : 'https://cieloecommerce.cielo.com.br/api/public/v2/token';
+      ? 'https://authsandbox.cieloecommerce.cielo.com.br/oauth2/token'
+      : 'https://auth.braspag.com.br/oauth2/token';
 }
 
 String _defineBase64(String clientId, String clientSecret) {
@@ -57,7 +57,7 @@ String _defineBase64(String clientId, String clientSecret) {
 }
 
 AccessTokenResult _oAuthResult(Response response) {
-  return response.statusCode == 201
+  return response.statusCode == 200 || response.statusCode == 201
       ? AccessTokenResult(
           accessTokenResponse:
               AccessTokenResponse.fromJson(jsonDecode(response.body)),
