@@ -1,3 +1,7 @@
+## 1.1.1
+
+* Correction in Tracking.
+
 ## 1.1.0
 
 * Modified OAuth call url.

@@ -30,14 +30,14 @@ class OAuth {
   }
 
   Future<AccessTokenResult> getToken() async {
-    String sdkName = 'cielo_oauth';
-    String sdkVersion = '1.1.0';
+    String sdkName = 'CieloOAuth';
+    String sdkVersion = '1.1.1';
 
     Response response = (await http.post(
       this._url,
       headers: <String, String>{
         'Authorization': 'Basic ${this._base64}',
-        'x-sdk-version': '$sdkName\_dart@$sdkVersion'
+        'x-sdk-version': '$sdkName-Dart@$sdkVersion'
       },
       body: <String, String>{'grant_type': 'client_credentials'},
     ));
